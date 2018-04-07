@@ -1,14 +1,25 @@
-//
-//  Dweller.hpp
-//  Dwellers
-//
-//  Created by Mikael on 07/04/2018.
-//  Copyright © 2018 Mikael. All rights reserved.
-//
-
 #ifndef Dweller_hpp
 #define Dweller_hpp
 
 #include <stdio.h>
+#include <SDL2/SDL.h>
+#include "Game.hpp"
+
+class Dweller {
+    
+public:
+    Dweller(SDL_Renderer *renderer);
+    ~Dweller();
+    
+    SDL_Texture* loadTexture(SDL_Renderer *renderer);
+    void draw(SDL_Renderer *renderer);
+    void pollEvents(SDL_Event &event);
+    
+private:
+    int _w, _h;
+    int _x, _y;
+    
+    SDL_Texture *texture;
+};
 
 #endif /* Dweller_hpp */
