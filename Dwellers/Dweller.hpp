@@ -11,9 +11,16 @@ public:
     Dweller(SDL_Renderer *renderer);
     ~Dweller();
     
-    const int size = 16;
+    const int size = 32;
+    enum directions {
+        DOWN = 0,
+        LEFT = 1,
+        RIGHT = 2,
+        UP = 3
+    };
+    int direction = DOWN;
     
-    void loadTexture(SDL_Renderer *renderer);
+    void loadTextures(SDL_Renderer *renderer);
     void draw(SDL_Renderer *renderer);
     void pollEvents(SDL_Event &event);
     
@@ -21,7 +28,7 @@ private:
     int _w, _h;
     int _x, _y;
     
-    SDL_Texture *texture;
+    SDL_Texture *textures[4];
 };
 
 #endif /* Dweller_hpp */

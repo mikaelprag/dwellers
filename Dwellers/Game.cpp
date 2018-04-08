@@ -26,6 +26,10 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
             std::cout << "Renderer created." << std::endl;
         }
         
+        if(IMG_Init(IMG_INIT_PNG) != IMG_INIT_PNG) {
+            std::cout << "Image lib failed to load: " << SDL_GetError() << std::endl;
+        }
+        
         loadBackground();
         
         isRunning = true;
@@ -41,16 +45,11 @@ void Game::loadBackground() {
     SDL_Texture *environmentTexture = nullptr;
     SDL_Surface *environmentSurface = nullptr;
     
-    if(IMG_Init(IMG_INIT_PNG) != IMG_INIT_PNG) {
-        std::cout << "Image lib failed to load: " << SDL_GetError() << std::endl;
-    } else {
-        std::cout << "Loading texture " << "tiles.png" << std::endl;
-        environmentSurface = IMG_Load("tiles.png");
-        if(environmentSurface == NULL) {
-            std::cout << "Failed to load image: " << SDL_GetError() << std::endl;
-        }
-        environmentTexture = SDL_CreateTextureFromSurface(renderer, environmentSurface);
+    environmentSurface = IMG_Load("tiles.png");
+    if(environmentSurface == NULL) {
+        std::cout << "Failed to load image: " << SDL_GetError() << std::endl;
     }
+    environmentTexture = SDL_CreateTextureFromSurface(renderer, environmentSurface);
     
     // The part of the image we want to extract:
     SDL_Rect tilePartRect;
