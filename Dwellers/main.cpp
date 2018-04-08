@@ -7,7 +7,11 @@ Game *game = nullptr;
 int main(int argc, const char * argv[]) {
 
     game = new Game();
-    game->init("Dweller", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
+    game->init("Dweller",
+               SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+               Game::WIDTH, Game::HEIGHT,
+    false);
+    
     SDL_Renderer *renderer = game->getRenderer();
     Dweller *dweller = new Dweller(renderer);
     
@@ -19,6 +23,7 @@ int main(int argc, const char * argv[]) {
         dweller->pollEvents(event);
         
         SDL_RenderClear(renderer);
+        game->draw(renderer);
         dweller->draw(renderer);
         SDL_RenderPresent(renderer);
     }

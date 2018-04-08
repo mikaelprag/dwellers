@@ -6,17 +6,21 @@
 #include "Dweller.hpp"
 
 class Game {
-  
+    
 public:
     Game();
     ~Game();
     
-    void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
+    static const int WIDTH = 800;
+    static const int HEIGHT = 600;
     
+    void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
+    void loadBackground();
     void handleEvents(SDL_Event &event);
-    void update();
-    void render();
+    void draw(SDL_Renderer *renderer);
     void clean();
+    
+    SDL_Texture *grass;
     
     SDL_Renderer *getRenderer();
     

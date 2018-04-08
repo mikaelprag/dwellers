@@ -11,7 +11,9 @@ public:
     Dweller(SDL_Renderer *renderer);
     ~Dweller();
     
-    SDL_Texture* loadTexture(SDL_Renderer *renderer);
+    const int size = 16;
+    
+    void loadTexture(SDL_Renderer *renderer);
     void draw(SDL_Renderer *renderer);
     void pollEvents(SDL_Event &event);
     
