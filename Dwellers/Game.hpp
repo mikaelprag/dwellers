@@ -14,14 +14,13 @@ public:
     static const int WIDTH = 800;
     static const int HEIGHT = 600;
     
-    void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
+    void init(const char* title, int xpos, int ypos, int width, int height);
     void loadBackground();
     void handleEvents(SDL_Event &event);
     void draw(SDL_Renderer *renderer);
     void clean();
     
     SDL_Texture *grass;
-    
     SDL_Renderer *getRenderer();
     
     bool running() { return isRunning; }

@@ -46,29 +46,30 @@ void Dweller::loadTextures(SDL_Renderer *renderer) {
 
 void Dweller::pollEvents(SDL_Event &event) {
     
+    SDL_PumpEvents();
     const Uint8 *state = SDL_GetKeyboardState(NULL);
     
     if(state[SDL_SCANCODE_UP]) {
         if(_y > 0) {
-            _y -= 1;
+            _y -= stepIncrement;
             direction = UP;
         }
     }
     if(state[SDL_SCANCODE_DOWN]) {
         if(_y < (Game::HEIGHT-size)) {
-            _y += 1;
+            _y += stepIncrement;
             direction = DOWN;
         }
     }
     if(state[SDL_SCANCODE_LEFT]) {
         if(_x > 0) {
-            _x -= 1;
+            _x -= stepIncrement;
             direction = LEFT;
         }
     }
     if(state[SDL_SCANCODE_RIGHT]) {
         if(_x < (Game::WIDTH-size)) {
-            _x += 1;
+            _x += stepIncrement;
             direction = RIGHT;
         }
     }

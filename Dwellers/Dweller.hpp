@@ -26,9 +26,10 @@ public:
     
 private:
     int _w, _h;
-    int _x, _y;
+    double _x, _y;
+    double stepIncrement = 0.25;
     
     SDL_Texture *textures[4];
 };
 
-#endif /* Dweller_hpp */
+#endif

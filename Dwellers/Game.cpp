@@ -2,28 +2,25 @@
 #include "Game.hpp"
 
 Game::Game(){}
-Game::~Game(){}
+Game::~Game(){
+    SDL_DestroyTexture(grass);
+}
 
-void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen) {
-    int flags = 0;
-    
-    if(fullscreen) {
-        flags = SDL_WINDOW_FULLSCREEN;
-    }
+void Game::init(const char *title, int xpos, int ypos, int width, int height) {
     
     if(SDL_Init(SDL_INIT_EVERYTHING) == 0) {
         std::cout << "Subsystems initialized." << std::endl;
         
-        window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
+        window = SDL_CreateWindow(title, xpos, ypos, width, height, NULL);
         if(window) {
-            std::cout << "Window created." << std::endl;
+            std::cout << "Window Created" << std::endl;
         }
         
         renderer = SDL_CreateRenderer(window, -1, 0);
         
         if(renderer) {
             SDL_SetRenderDrawColor(renderer, 0, 100, 0, 0);
-            std::cout << "Renderer created." << std::endl;
+            std::cout << "Renderer Created" << std::endl;
         }
         
         if(IMG_Init(IMG_INIT_PNG) != IMG_INIT_PNG) {
@@ -72,6 +69,7 @@ void Game::loadBackground() {
     grass = result;
     
     SDL_FreeSurface(environmentSurface);
+    SDL_DestroyTexture(environmentTexture);
 }
 
 SDL_Renderer *Game::getRenderer() {
@@ -103,5 +101,5 @@ void Game::clean() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
-    std::cout << "Game cleaned." << std::endl;
+    std::cout << "SDL Cleaned." << std::endl;
 }

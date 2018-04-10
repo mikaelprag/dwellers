@@ -12,6 +12,8 @@
 		62D36DFE2079219700C7D154 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D36DF5207909F700C7D154 /* SDL2.framework */; };
 		62D36E002079219700C7D154 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D36DFF2079219700C7D154 /* SDL2_image.framework */; };
 		62D36E032079387100C7D154 /* Dweller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62D36E012079387100C7D154 /* Dweller.cpp */; };
+		62D36E05207A8FC800C7D154 /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D36E04207A8FC800C7D154 /* SDL2_net.framework */; };
+		62D36E08207A905900C7D154 /* NetConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62D36E06207A905900C7D154 /* NetConnection.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,9 @@
 		62D36DFF2079219700C7D154 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		62D36E012079387100C7D154 /* Dweller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dweller.cpp; sourceTree = "<group>"; };
 		62D36E022079387100C7D154 /* Dweller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Dweller.hpp; sourceTree = "<group>"; };
+		62D36E04207A8FC800C7D154 /* SDL2_net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_net.framework; path = ../../../Library/Frameworks/SDL2_net.framework; sourceTree = "<group>"; };
+		62D36E06207A905900C7D154 /* NetConnection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NetConnection.cpp; sourceTree = "<group>"; };
+		62D36E07207A905900C7D154 /* NetConnection.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NetConnection.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D36E05207A8FC800C7D154 /* SDL2_net.framework in Frameworks */,
 				62D36E002079219700C7D154 /* SDL2_image.framework in Frameworks */,
 				62D36DFE2079219700C7D154 /* SDL2.framework in Frameworks */,
 			);
@@ -77,6 +83,8 @@
 				62D36DF720790E8B00C7D154 /* Game.cpp */,
 				62D36E012079387100C7D154 /* Dweller.cpp */,
 				62D36E022079387100C7D154 /* Dweller.hpp */,
+				62D36E06207A905900C7D154 /* NetConnection.cpp */,
+				62D36E07207A905900C7D154 /* NetConnection.hpp */,
 			);
 			path = Dwellers;
 			sourceTree = "<group>";
@@ -84,6 +92,7 @@
 		62D36DF4207909F700C7D154 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62D36E04207A8FC800C7D154 /* SDL2_net.framework */,
 				62D36DFF2079219700C7D154 /* SDL2_image.framework */,
 				62D36DFC20791E4100C7D154 /* libSDL2-2.0.0.dylib */,
 				62D36DFA20791E2A00C7D154 /* libSDL2_image-2.0.0.dylib */,
@@ -149,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D36DEE207909DA00C7D154 /* main.cpp in Sources */,
+				62D36E08207A905900C7D154 /* NetConnection.cpp in Sources */,
 				62D36E032079387100C7D154 /* Dweller.cpp in Sources */,
 				62D36DF920790E8B00C7D154 /* Game.cpp in Sources */,
 			);
