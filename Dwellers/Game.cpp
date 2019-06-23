@@ -42,7 +42,7 @@ void Game::loadBackground() {
     SDL_Texture *environmentTexture = nullptr;
     SDL_Surface *environmentSurface = nullptr;
     
-    environmentSurface = IMG_Load("tiles.png");
+    environmentSurface = IMG_Load("art/tiles.png");
     if(environmentSurface == NULL) {
         std::cout << "Failed to load image: " << SDL_GetError() << std::endl;
     }

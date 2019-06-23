@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6233DE4C22BFDE2D00328990 /* art in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6233DE4A22BFDCFB00328990 /* art */; };
 		62D36DEE207909DA00C7D154 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62D36DED207909DA00C7D154 /* main.cpp */; };
 		62D36DF920790E8B00C7D154 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62D36DF720790E8B00C7D154 /* Game.cpp */; };
 		62D36DFE2079219700C7D154 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D36DF5207909F700C7D154 /* SDL2.framework */; };
@@ -19,12 +20,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		62D36DE8207909DA00C7D154 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				6233DE4C22BFDE2D00328990 /* art in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 

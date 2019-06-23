@@ -30,7 +30,7 @@ void Dweller::loadTextures(SDL_Renderer *renderer) {
     
     for(int i = 0; i < 4; i++) {
         
-        std::string fileName = std::to_string(i).append(".png");
+        std::string fileName = "art/" + std::to_string(i).append(".png");
         
         SDL_Surface *charactersSurface = IMG_Load(fileName.c_str());
         if(charactersSurface == NULL) {
