@@ -29,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6233DE4A22BFDCFB00328990 /* art */ = {isa = PBXFileReference; lastKnownFileType = folder; path = art; sourceTree = "<group>"; };
 		62D36DEA207909DA00C7D154 /* Dwellers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Dwellers; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D36DED207909DA00C7D154 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		62D36DF5207909F700C7D154 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		62D36DEC207909DA00C7D154 /* Dwellers */ = {
 			isa = PBXGroup;
 			children = (
+				6233DE4A22BFDCFB00328990 /* art */,
 				62D36DED207909DA00C7D154 /* main.cpp */,
 				62D36DF820790E8B00C7D154 /* Game.hpp */,
 				62D36DF720790E8B00C7D154 /* Game.cpp */,
@@ -280,16 +282,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LKBT7LH25S;
+				DEVELOPMENT_TEAM = 98KHR9SY6Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/sdl2_image/2.0.3/lib,
-					/usr/local/Cellar/sdl2/2.0.8/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -298,16 +296,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LKBT7LH25S;
+				DEVELOPMENT_TEAM = 98KHR9SY6Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/sdl2_image/2.0.3/lib,
-					/usr/local/Cellar/sdl2/2.0.8/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
